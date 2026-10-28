@@ -1,0 +1,59 @@
+CREATE TABLE Library_Borrowing (
+    record_id INTEGER PRIMARY KEY,
+    book_name TEXT NOT NULL,
+    author_name TEXT NOT NULL,
+    category TEXT NOT NULL,
+    student_name TEXT NOT NULL,
+    issue_date TEXT,
+    due_date TEXT,
+    return_status TEXT,
+    fine_amount REAL DEFAULT 0
+);
+INSERT INTO Library_Borrowing
+(record_id, book_name, author_name, category, student_name,
+ issue_date, due_date, return_status, fine_amount)
+VALUES
+(1, 'The Alchemist', 'Paulo Coelho', 'Fiction', 'Pawani',
+ '2026-01-05', '2026-01-19', 'Returned', 0),
+
+(2, 'Wings of Fire', 'A.P.J. Abdul Kalam', 'Science', 'Rahul',
+ '2026-01-07', '2026-01-21', 'Returned', 5),
+
+(3, 'Python Crash Course', 'Eric Matthes', 'Programming', 'Pawani',
+ '2026-01-10', '2026-01-24', 'Not Returned', 25),
+
+(4, 'A Brief History of Time', 'Stephen Hawking', 'Science', 'Priya',
+ '2026-01-12', '2026-01-26', 'Returned', 15),
+
+(5, 'Harry Potter', 'J.K. Rowling', 'Fiction', 'Amit',
+ '2026-01-15', '2026-01-29', 'Not Returned', 30),
+
+(6, 'Clean Code', 'Robert C. Martin', 'Programming', 'Rahul',
+ '2026-01-18', '2026-02-01', 'Returned', 0),
+
+(7, 'The Discovery of India', 'Jawaharlal Nehru', 'History', 'Priya',
+ '2026-01-20', '2026-02-03', 'Not Returned', 20),
+
+(8, 'The Great Gatsby', 'F. Scott Fitzgerald', 'Fiction', 'Sneha',
+ '2026-01-22', '2026-02-05', 'Returned', 10),
+
+(9, 'Introduction to Algorithms', 'Thomas H. Cormen', 'Programming', 'Amit',
+ '2026-01-25', '2026-02-08', 'Not Returned', 40),
+
+(10, 'India After Gandhi', 'Ramachandra Guha', 'History', 'Pawani',
+ '2026-01-27', '2026-02-10', 'Returned', 0),
+
+(11, 'Cosmos', 'Carl Sagan', 'Science', 'Sneha',
+ '2026-02-01', '2026-02-15', 'Not Returned', 12),
+
+(12, 'The Hobbit', 'J.R.R. Tolkien', 'Fiction', 'Rahul',
+ '2026-02-03', '2026-02-17', 'Returned', 8),
+
+(13, 'Learning SQL', 'Alan Beaulieu', 'Programming', 'Priya',
+ '2026-02-05', '2026-02-19', 'Not Returned', 18),
+
+(14, 'The Art of War', 'Sun Tzu', 'History', 'Amit',
+ '2026-02-08', '2026-02-22', 'Returned', 3),
+
+(15, 'Database System Concepts', 'Abraham Silberschatz', 'Programming', 'Sneha',
+ '2026-02-10', '2026-02-24', 'Not Returned', 22);
